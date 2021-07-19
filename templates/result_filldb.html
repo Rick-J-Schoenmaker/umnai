@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<header class="header-section" style="background-color:#08a882;">
+     <h1>ACME vehicle tracking tool</h1>
+    <div class="header-top">
+        <div class="container">
+            <div class="row header_top_inner d-flex">
+                <div class="col-md-9 d-flex text-left contact-info">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<header>
+
+<div class="topnav">
+    <a class="active" href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('search_db') }}">Search</a>
+    <a href="{{ url_for('fill_db') }}">Add</a>
+    <a href="{{ url_for('delete') }}">Delete</a>
+</div>
+</header>
+
+
+
+<body>
+    <meta charset="UTF-8">
+    <title>The following vehicle has been added to the database</title>
+
+        <table style="width:100%" border="black">
+            <tr>
+                <th>Result</th>
+            </tr>
+            <tr>
+                {% for lis in listone %}
+                <td><b>Type:</b> {{ vehicle_type }}</td>
+                <td><b>Make:</b> {{ vehicle_make }}</td>
+                <td><b>Model:</b> {{ vehicle_model }}</td>
+                <td><b>Year:</b> {{ vehicle_year }}</td>
+                <td><b>Seat capacity:</b> {{ vehicle_seat }}</td>
+                <td><b>{{ option }}</b> {{ vehicle_option }}</td>
+                {% endfor %}
+            </tr>
+
+        </table>
+        <br>
+
+</body>
+
+
+</html>

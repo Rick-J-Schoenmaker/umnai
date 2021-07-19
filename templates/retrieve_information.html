@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<header class="header-section" style="background-color:#08a882;">
+     <h1>ACME vehicle tracking tool</h1>
+    <div class="header-top">
+        <div class="container">
+            <div class="row header_top_inner d-flex">
+                <div class="col-md-9 d-flex text-left contact-info">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<header>
+
+<div class="topnav">
+    <a class="active" href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('search_db') }}">Search</a>
+    <a href="{{ url_for('fill_db') }}">Add</a>
+    <a href="{{ url_for('delete') }}">Delete</a>
+</div>
+</header>
+
+
+<br>
+<br>
+<br>
+<body>
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        <label for="TYPE">Type of vehicle:</label><br>
+        <select id="TYPE" name="TYPE"><br><br>
+            <option value="Car">Car</option>
+            <option value="Truck">Truck</option>
+            <option value="Motorcycle">Motorcycle</option>
+        </select>
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Search_Type">
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        <label for="MAKE">Make:</label><br>
+        <input class="form-control MAKE" id="MAKE" name="MAKE"><br>
+        <br>
+        <input type="submit" value="Search_Make">
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        <label for="VIN">VIN:</label><br>
+        <input class="form-control VIN" id="VIN" name="VIN"><br>
+        <br>
+        <input type="submit" value="Search_VIN">
+    </form>
+    <br>
+        <br>
+</div>
+</body>
+<br>
+<br>
+<br>
+<br>
+</html>
