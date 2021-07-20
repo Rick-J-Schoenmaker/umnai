@@ -10,7 +10,8 @@ def search_value(key, value):
     result = []
     for res in temp:
         result.append(res)
-    return result
+    if len(result) >= 1:
+        return result
 
 # Define search_vin(key, value) function can be called to search for a specific VIN (id) in the database.
 def search_vin(key, value):
@@ -23,7 +24,8 @@ def getall(key):
     result = []
     for res in temp:
         result.append(res)
-    return result
+    if len(result) >= 1:
+        return result
 
 # Define insert_db(key) function can be called to insert a single vehicle to the database.
 def insert_db(key):

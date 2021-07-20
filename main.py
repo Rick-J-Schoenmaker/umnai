@@ -1,26 +1,34 @@
+# Vehicle tracking tool ACME
 # Name: Rick Schoenmaker
 # Date: 20/07/2021
 
 from flask import Flask, render_template, request
 from DBconnection import search_value, search_vin, getall, insert_db, delete_from_db
+from FillDB import createandfill
 
 app = Flask(__name__)
 
 # A list of all types of vehicles that can be present in this tool.
 types = ['Car', 'Truck', 'Motorcycle']
 
-# calls a function to get all vehicle Makes present in the database.
+# Calls a function to get all vehicle Makes present in the database.
 extract_all_makes = getall("Make")
 
-# a list containing one value.
+# A list containing one value.
 listone = ["one"]
 
-# a empty string for use in function.
+# A empty string for use in function.
 option = ""
 
 @app.route('/')
-# Define index() function provides user with the home screen.
+# Define index() function provides user with the home screen and calls function to make database if it is empty.
 def index():
+    # Check if database with test data is created
+    if getall("_id") == None:
+        createandfill()
+        print("database created")
+    else:
+        print("database already exists")
     return render_template('index.html')
 
 
