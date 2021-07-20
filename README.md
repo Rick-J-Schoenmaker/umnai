@@ -16,7 +16,7 @@ For any questions please email me: rickschoenmaker@hotmail.com
 
 # How to get started:
 
-##################################################################################################################################################################
+##############################################################################################################
 Before you will be able to use this application you need a local installation of mongodb.
 With the following commands you can make a simple install of mongodb on your linux device.
 
