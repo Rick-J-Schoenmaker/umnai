@@ -6,10 +6,10 @@
 # Python version: 3.9
 
 
-This script was created for umnai.
+This application was created for Umnai.
 
 
-Before starting you will be able to start this application you need a local install of mongodb.
+Before you will be able to use this application you need a local installation of mongodb.
 With the following commands you can make a simple install of mongodb on your device.
 
 First command:
@@ -25,7 +25,7 @@ Now mongodb is installed we can proceed with running the application.
 Make sure that you have the requirements.txt installed before running the application.
 
 Before starting the application we need to fill the database.
-Running FillDB.py will fill the with six vehicles\
+Running FillDB.py will fill the with six vehicles.
 
 To start the application run main.py and go to the localhost address.
 Here you can navigate the tool and search, add and delete vehicles from the database.
