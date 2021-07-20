@@ -1,5 +1,4 @@
-from flask import Flask, render_template, request, redirect,url_for
-from flask_restful import Api, Resource, abort, reqparse
+from flask import Flask, render_template, request
 from DBconnection import search_value, search_vin, getall, insert_db, delete_from_db
 
 app = Flask(__name__)
@@ -17,6 +16,7 @@ def index():
 @app.route('/search_db', methods=['GET', 'POST'])
 def search_db():
     if request.method == 'POST':
+#get vehicles by Type
         try:
             if types.__contains__(request.form['TYPE']):
                 vehicle_type = request.form["TYPE"]
@@ -28,6 +28,7 @@ def search_db():
                 print("No type provided")
         except:
                 print("No type provided")
+
 # Get vehicles by Make
         try:
             if extract_all_makes.__contains__(request.form['MAKE']):
