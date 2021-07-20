@@ -30,7 +30,7 @@ Third command:
 sudo service mongodb start
 
 Now mongodb is installed we can proceed with running the application.
-##################################################################################################################################################################
+##############################################################################################################
 
 
 Make sure that you have the requirements from the requirements.txt file installed before running the application.
@@ -41,4 +41,4 @@ Through your command line or IDE navigate to the localhost address provided afte
 
 A page will open were you can navigate the tool. It provides options to search, add and delete vehicles from the database.
 
-##################################################################################################################################################################
+###############################################################################################################
