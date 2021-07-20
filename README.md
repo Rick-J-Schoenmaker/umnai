@@ -6,8 +6,13 @@
 # Python version: 3.9
 
 
+
 This application was created for Umnai.
 For any questions please email me: rickschoenmaker@hotmail.com
+
+
+
+
 
 # How to get started:
 Before you will be able to use this application you need a local installation of mongodb.
