@@ -1,9 +1,12 @@
 from pymongo import MongoClient
+
+# Define createandfill() function to build the database and provide the user with some test data.
 def createandfill():
     myclient = MongoClient("mongodb://localhost:27017/")
     mydb = myclient["ACME"]
     mycol = mydb["Vehicles"]
 
+    # Dictionary with test data.
     mydict = {"_id": 1, "Type": "Car", "Make": "Land Rover", "Model": "Freelander 2", "Year": 2007, "Seat capacity": 5,
           "Roof rack availability": True}, {"_id": 2, "Type": "Truck", "Make": "Scania", "Model": "XL",
                                             "Year": 2013, "Haul capacity": 1000},\
@@ -14,8 +17,10 @@ def createandfill():
         {"_id": 6, "Type": "Motorcycle", "Make": "Kawasaki", "Model": "Ninja", "Year": 2015,
           "Sidecar capacity": False}
 
+    # statement to fill the values from mydict
     x = mycol.insert_many(mydict)
     for x in mycol.find():
         print(x)
 
+# call the function
 createandfill()
