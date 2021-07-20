@@ -15,7 +15,6 @@ def createandfill():
           "Sidecar capacity": False}
 
     x = mycol.insert_many(mydict)
-    # x = mycol.delete_many({})
     for x in mycol.find():
         print(x)
 
