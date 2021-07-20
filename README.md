@@ -1,7 +1,7 @@
 # ACME vehicle tracking tool
 # technical test umnai
 # Name: Rick Schoenmaker
-# Date:20/07/2021
+# Date: 20/07/2021
 # Work hours: +- 20 hours
 # Python version: 3.9
 
